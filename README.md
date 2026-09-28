@@ -2,9 +2,18 @@
 
 [![C++17](https://img.shields.io/badge/Language-C%2B%2B17-blue.svg?logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A deterministic, high-performance discrete-event network simulator implemented in **C++17**. The project evaluates distributed **Open Shortest Path First (OSPF)** link-state discovery alongside **Segment Routing (SR)** traffic engineering, demonstrating how dynamic label-stack detours resolve link saturation and maximize flow throughput under constrained capacities.
+
+## 👨‍💻 Engineering Ownership & Attribution
+
+- **Algorithmic Engine & Optimization (My Core Contribution):**
+  - **Dynamic Segment Routing (SR) Algorithm:** Designed and implemented path traversal and dynamic label-stack generation (`buildSegmentRoutingLabels()`, `traverseNetwork()`) to steer flows around congested bottlenecks.
+  - **Distributed Link-State Discovery:** Implemented distributed neighbor state synchronization via `TRA_ctrl_packet` exchange and dynamic link capacity tracking.
+  - **Admission Control Engine:** Authored residual capacity path evaluation logic (`canTransmitFlow()`) to dynamically balance network load under discrete-event constraints.
+
+- **Harness & Simulation Architecture (Framework Scaffolding):**
+  - The underlying event queue scheduler (`event`), generator factory patterns (`packet_generator`, `node_generator`), and physical link base models were adapted from an academic discrete-event network simulation harness.
 
 
 ## 💡 System Motivation & Problem Statement
@@ -228,6 +237,3 @@ After event simulation completes, each switch outputs its computed next-hop forw
 0 2           <-- (Destination 0 -> Forward to Next Hop 2)
 ```
 
-## 📄 License
-
-This project is open-source and distributed under the [MIT License](LICENSE).
