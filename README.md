@@ -56,7 +56,7 @@ Flow 2: 2 -> 0 (Size: 4) ===> Detoured via Segment Node 11     [2 -> 11 -> 12 ->
 Flow 3: 3 -> 0 (Size: 5) ===> Detoured via Segment Node 6      [3 -> 6 -> 5 -> 0]
 Total Admitted Flow Rate = 12 (300% throughput increase)
 ```
-By detouring flows through underutilized segments, all 3 flows are admitted simultaneously without violating link capacity constraints.
+(By detouring flows through underutilized segments, all 3 flows are admitted simultaneously without violating link capacity constraints.)
 
 
 ## 🏛️ Simulator Architecture & Design Patterns
@@ -188,7 +188,7 @@ FlowID  Src  Dst  FlowSize  ArriveTime
 2 3 0 5 300
 
 ```
-Defines a 15-node network with 28 links of capacity 5, requesting 3 sequential flows destined for node 0 at times 100, 200, and 300.
+(Defines a 15-node network with 28 links of capacity 5, requesting 3 sequential flows destined for node 0 at times 100, 200, and 300.)
 
 ---
 
