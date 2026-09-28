@@ -1799,7 +1799,6 @@ void TRA_switch::recv_handler (packet *p){
             }
 
             if ((!hi) && (count == total_links)) {
-                // cout << "   ******** do routin table :>" << endl;
                 int nodeTable[total_switches][3];
                 for (unsigned int source = 0; source < total_switches; source++) {
                     for (unsigned int destination = 0; destination < total_switches; destination++) {
