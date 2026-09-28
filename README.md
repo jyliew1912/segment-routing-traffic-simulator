@@ -1,7 +1,7 @@
 # 🌐 Discrete-Event Network Simulator with OSPF & Segment Routing (SR)
 
 [![C++17](https://img.shields.io/badge/Language-C%2B%2B17-blue.svg?logo=c%2B%2B)](https://en.cppreference.com/w/cpp/17)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](#)
+[![Build Status](https://github.com/jyliew1912/segment-routing-traffic-simulator/actions/workflows/ci.yml/badge.svg)](https://github.com/jyliew1912/segment-routing-traffic-simulator/actions/workflows/ci.yml)
 
 A deterministic, high-performance discrete-event network simulator implemented in **C++17**. The project evaluates distributed **Open Shortest Path First (OSPF)** link-state discovery alongside **Segment Routing (SR)** traffic engineering, demonstrating how dynamic label-stack detours resolve link saturation and maximize flow throughput under constrained capacities.
 
