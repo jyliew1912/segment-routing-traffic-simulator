@@ -237,3 +237,9 @@ After event simulation completes, each switch outputs its computed next-hop forw
 0 2           <-- (Destination 0 -> Forward to Next Hop 2)
 ```
 
+## 📜 Academic Notice & Attribution
+
+- **Algorithmic Implementation:** The path traversal, segment label stack computation (`buildSegmentRoutingLabels()`), admission control, and dynamic detour logic were authored by **[@jyliew1912](https://github.com/jyliew1912)**.
+- **Simulation Harness:** The underlying discrete-event priority queue and generator factory scaffolding are adapted from an academic discrete-event network modeling framework.
+- This repository is maintained strictly for educational and portfolio evaluation purposes.
+
