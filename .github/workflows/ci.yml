@@ -1,0 +1,24 @@
+name: C++ Build & Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile with GCC
+        run: |
+          g++ -std=c++17 -O3 -Wall -Wextra -Wno-unused-parameter src/main.cpp -o network_sim
+
+      - name: Run Test Simulation
+        run: |
+          ./network_sim < sample_inputs/sample_15node.txt > output.log
+          test -s output.log && echo "Simulation finished successfully."
